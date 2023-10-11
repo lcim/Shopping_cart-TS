@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Pernonallly added
+
+junk.txt
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
