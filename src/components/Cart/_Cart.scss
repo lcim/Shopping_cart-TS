@@ -1,0 +1,93 @@
+@import "../App/variables";
+
+// main{
+//   background-color: darken($main_background_color, 4%);
+// }
+.cart {
+  margin: 0;
+  padding: 0;
+  padding-block: $base_padding;
+  background-color: darken($main_background_color, 58%);
+}
+.cart__summary {
+  background-color: darken($main_background_color, 4%);
+  padding: $base_padding * 2;
+  & p {
+    font-weight: map-get($map: $fontWeight, $key: bold);
+  }
+  & .grand__price{
+    font-size: map-get($map: $fontSizes, $key: normal2);
+    text-decoration: underline;
+  }
+  .checkout {
+    @include btn();
+    &:hover {
+      background: darken($color: $main_background_color, $amount: 60%);
+    }
+  }
+}
+.empty__cart,
+.after__submit {
+  text-align: center;
+  padding-inline: $base_padding * 2;
+}
+.cart__item {
+  background-color: lighten($main_background_color, 1%);
+  text-decoration: none;
+  list-style: none;
+  margin: $base_margin;
+  border-radius: $md-borderRadius;
+  @include flex();
+  justify-content: space-evenly;
+
+  &__image__wrapper {
+    @include flex();
+    flex-wrap: nowrap;
+    width: 200px;
+    height: 200px;
+    .item__image {
+      width: 80%;
+      height: 80%;
+    }
+  }
+  .cart__descriptions {
+    @include flex(column);
+    font-family: Montserrat;
+    padding: $base_padding;
+    @include breakpoint(960px){
+      flex-direction: row;
+      column-gap: $base_padding;
+    }
+    // 
+    .cart__item__subtotal {
+      font-weight: map-get($map: $fontWeight, $key: semi_bold);
+    }
+    // .sub__totals,
+    // .offscreen,
+    // .remove__item__from__cart {
+    //   margin-inline-start: $base_margin * 2;
+    // }
+    .manually__select__qty {
+      font-weight: map-get($map: $fontWeight, $key: semi_bold);
+      color: $heading-color;
+      width: 3rem;
+      height: 3rem;
+      padding: $base_padding * 0.4;
+      border-radius: 50%;
+      background-color: lighten($color: $main_background_color, $amount: 4%);
+      border: 1px solid complement($color: $main_background_color);
+      &:hover {
+        background-color: darken($main_background_color, 44%);
+        font-size: map-get($map: $fontSizes, $key: normal2)
+        }
+    }
+    .remove__item__from__cart {
+      @extend .manually__select__qty;
+      font-size: map-get($map: $fontSizes, $key: medium);
+      &:hover {
+        background-color: $danger;
+        color: darken(complement($color: $danger), 15%);
+      }
+    }
+  }
+}

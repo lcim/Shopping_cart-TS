@@ -1,0 +1,148 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap");
+
+$text_color1: #0a211f;
+$main_background_color: #deffea;
+$secondary_background_color: #ddeedd;
+$heading-color: #862b0d;
+$danger: #FE0000;
+$base_padding: 1rem;
+$base_margin: 1rem;
+$sm-borderRadius: 12px;
+$md-borderRadius: 21px;
+$lg-borderRadius: 33px;
+$xl-borderRadius: 44px;
+$fontWeight: (
+  bold: 900,
+  semi_bold: 700,
+  normal: 500,
+  "less_normal": 400,
+);
+$fontSizes: (
+  normal: 1rem,
+  normal1: 1.1rem,
+  normal2: 1.2rem,
+  normal3: 1.3rem,
+  normal4: 1.4rem,
+  medium: 1.5rem,
+  large: 3rem,
+  xl: 5rem,
+);
+
+@function defaultBorder(  $color: black, $width: 1px, $type: solid,) {
+  $borderStyle: $color $width $type;
+  @return $borderStyle
+}
+
+$heading_font_fam: Roboto;
+$body_font_fam: Montserrat;
+
+
+@mixin flex($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  flex-direction: $direction;
+  // border-radius: $md-borderRadius;
+}
+
+@mixin btn($fontsize: 1rem) {
+  padding: 0.7rem;
+  font-size: $fontsize;
+  font-weight: map-get($fontWeight, semi_bold);
+  border-radius: $sm-borderRadius;
+}
+
+@mixin breakpoint($bp: 0) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+/*
+
+$breakpoints: (
+  "xs": 0,
+  "smm": 300px,
+  "sm": 480px,
+  "md": 720px,
+  "lg": 960px,
+  "xl": 1200px,
+);
+
+
+@mixin xs {
+  @media (mid-width: map-get($breakpoints, "xs")) {
+    @content;
+  }
+}
+@mixin smm {
+  @media (mid-width: map-get($breakpoints, "smm")) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (mid-width: map-get($breakpoints, "sm")) {
+    @content;
+  }
+}
+@mixin md {
+  @media (mid-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (mid-width: map-get($breakpoints, "lg")) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (mid-width: map-get($breakpoints, "xl")) {
+    @content;
+  }
+}
+
+.myclass {
+  @include breakpoint(300px) {
+    width: 90%;
+  }
+}
+
+.myclass2 {
+  @include flex(column);
+  flex-direction: column;
+  color: mix(white, #2323de);
+  &:hover {
+    color: mix(#fafafa, #5565de);
+  }
+}
+
+.myclass3 {
+  @extend .myclass;
+  width: 100%;
+}
+
+@function lighten-comp($color) {
+  $complement: complement($color);
+  $light-complement: lighten($complement, 44%);
+  @return $light-complement;
+}
+
+.myclass4 {
+  color: lighten-comp(#232343);
+  #{&}__sub-class {
+    color: lighten-comp(#443343);
+  }
+}
+
+$myList: flex-start, flex-end, center, space-around, space-between;
+// One can iterate through the above list
+
+@mixin theme($light_theme: true) {
+  @if $light_theme {
+    background-color: lighten(#122211, 96%);
+    color: darken(FAFAFA, 100%);
+  }
+}
+ * /

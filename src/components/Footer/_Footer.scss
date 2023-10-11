@@ -1,0 +1,25 @@
+@import "../App/variables";
+
+.footer__container {
+  background-color: darken($main_background_color, 4%);
+  padding-inline-start: $base_padding * 2;
+  padding-block: 0; 
+  & p {
+    margin-block: 0;
+    padding-block: 0 $base_padding * 2;
+  } 
+
+  .footer {
+    background-color: darken($main_background_color, 4%);
+    padding: $base_padding * 2;
+    p {
+      margin-block: 0;
+      padding: $base_padding * 0.3;
+      font-weight: map-get($map: $fontWeight, $key: semi_bold);
+    }
+    p:nth-child(2) span {
+      text-decoration: underline;
+      font-size: map-get($map: $fontSizes, $key: medium);
+    }
+  }
+}

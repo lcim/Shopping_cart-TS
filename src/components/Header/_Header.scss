@@ -1,0 +1,45 @@
+
+@import '../App/variables';
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+.header__container {
+  @include flex(column);
+  justify-content: space-between;
+  padding-inline: $base_padding * 2;
+  background-color: darken($main_background_color, 4%);
+  font-weight: map-get($fontWeight, semi_bold);
+  box-shadow: 0 3px 3px darken($main_background_color, 68%);
+  margin-block: 0 3px;
+  @include breakpoint(960px){
+    flex-direction: row;
+  }
+  .title {
+    font-size: 3rem;
+    color: $heading-color;
+    font-weight: map-get($fontWeight, bold);
+    font-family: $heading_font_fam;
+    font-style: italic;
+    text-align: center;
+  }
+  .shopping__summary {
+    color: $heading-color;
+    font-family: $heading_font_fam;
+  }
+  .toggle__cart {
+    @include btn(1rem);
+    color: darken($heading-color, 9%);
+    background-color: lighten($main_background_color, 3%);
+    &:hover {
+      background-color: darken($main_background_color, 10%);
+      box-shadow: #2b582a 0 6px 3px;
+      color: lighten($heading-color, 20%);
+    }
+  }
+}
+

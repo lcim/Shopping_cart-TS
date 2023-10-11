@@ -1,0 +1,16 @@
+{
+    "products": [
+        {"sku": "item0001", "price": 3999,
+        "name": "full_chicken"
+        },
+        {"sku": "item0002", "price": 2999,
+        "name": "crate_of_egg"
+        },
+        {"sku": "item0003", "price": 3499,
+        "name": "old_layer"
+        },
+        {"sku": "item0004", "price": 100,
+        "name": "maize"
+        }
+    ]
+}
