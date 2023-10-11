@@ -1,4 +1,4 @@
-import { ReactElement, createContext, useState } from "react";
+import { ReactElement, createContext, useState, useMemo } from "react";
 
 export type ProductType = {
   sku: string;
@@ -27,6 +27,8 @@ type ChildrenType = { children?: ReactElement | ReactElement[] };
 
 export const ProductsProvider = ({ children }: ChildrenType): ReactElement => {
   const [products, setProducts] = useState<ProductType[]>(initState);
+  console.log(setProducts)
+  // const stateProvider = useMemo(() => ({products, setProducts}), [products])
   return (
     <ProductsContext.Provider value={{ products }}>
       {children}

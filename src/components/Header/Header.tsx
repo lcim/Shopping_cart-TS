@@ -1,5 +1,5 @@
 import UseCartHook from "../Hooks/UseCartHook";
-import UseProductHook from "../Hooks/UseProductHook";
+// import UseProductHook from "../Hooks/UseProductHook";
 import "./_Header.scss";
 import React from "react";
 
