@@ -3,14 +3,14 @@
 .main__products {
   background-color: lighten($main_background_color, 1%);
   @include flex();
-  padding-block-end: $base_padding * 1.5; 
+  padding-block-end: $base_padding * 3; 
   background-image: $background_gradientL1B;
 }
 
 .product {
   @include flex(column);
   row-gap: 1rem;
-  padding-inline: $base_padding;
+  padding-inline: $base_padding * 0.5;
   margin-inline: $base_margin;
   margin-block: $base_margin * 2;
   width: 100%;
