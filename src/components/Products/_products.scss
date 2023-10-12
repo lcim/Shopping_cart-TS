@@ -3,7 +3,8 @@
 .main__products {
   background-color: lighten($main_background_color, 1%);
   @include flex();
-  padding-block-end: $base_padding * 3;
+  padding-block-end: $base_padding * 3; 
+  background-image: $background_gradientL1B;
 }
 
 .product {
@@ -50,6 +51,7 @@
     margin-block: 0;
     border-radius: $md-borderRadius;
     background-color: darken($main_background_color, 4%);
+    
   }
   &__name {
     font-size: map-get($fontSizes, medium);

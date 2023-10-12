@@ -12,6 +12,20 @@ $sm-borderRadius: 12px;
 $md-borderRadius: 21px;
 $lg-borderRadius: 33px;
 $xl-borderRadius: 44px;
+$background_gradientL1: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+$background_gradientL1B: linear-gradient(to right, #c6ffdd, #fbd786, #EA7D3E);
+$background_gradientL2: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+$background_gradientL3: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1) 91.1% );
+$background_gradientL4: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );
+$background_gradientL5: linear-gradient(to right, #ff6e7f, #bfe9ff);
+$background_gradientL6: linear-gradient(to right, #FFD194, #D1913C);
+$background_gradientL7: linear-gradient(to right, #b6fbff, #83a4d4);
+$background_gradientL8: linear-gradient(to right, #FFD194, #D1913C);
+$background_gradientL9: linear-gradient(to right, #ffefba, #ffffff);
+$background_gradientL10:  linear-gradient(to right, #a8c0ff, #3f2b96);
+$background_gradientL11:  linear-gradient(to right, #d3cce3, #e9e4f0);
+$background_gradientR1: radial-gradient(circle farthest-side, #fceabb, #f8b500);
+$background_gradientR2: radial-gradient( circle 759px at -6.7% 50%, rgba(80,131,73,1) 0%, rgba(140,209,131,1) 26.2%, rgba(178,231,170,1) 50.6%, rgba(144,213,135,1) 74.1%, rgba(75,118,69,1) 100.3% );
 $fontWeight: (
   bold: 900,
   semi_bold: 700,
