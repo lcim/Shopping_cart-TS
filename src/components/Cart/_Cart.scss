@@ -22,9 +22,7 @@
     font-weight: map-get($map: $fontWeight, $key: bold);
   }
   & .grand__price {
-    @include breakpoint(480px){
-      font-size: map-get($map: $fontSizes, $key: normal2);
-    }    
+    font-size: map-get($map: $fontSizes, $key: normal2);
     text-decoration: underline;
   }
   .checkout {
@@ -68,7 +66,11 @@
     }
     //
     .cart__item__subtotal {
-      font-weight: map-get($map: $fontWeight, $key: semi_bold);
+      text-decoration: underline;
+      font-size: map-get($map: $fontSizes, $key: under_normal8);
+      @include breakpoint(480px) {
+        font-weight: map-get($map: $fontWeight, $key: semi_bold);
+      }
     }
     // .sub__totals,
     // .offscreen,
