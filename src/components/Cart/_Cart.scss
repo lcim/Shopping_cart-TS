@@ -22,7 +22,9 @@
     font-weight: map-get($map: $fontWeight, $key: bold);
   }
   & .grand__price {
-    font-size: map-get($map: $fontSizes, $key: normal2);
+    @include breakpoint(480px){
+      font-size: map-get($map: $fontSizes, $key: normal2);
+    }    
     text-decoration: underline;
   }
   .checkout {
