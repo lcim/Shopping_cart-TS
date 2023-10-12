@@ -3,7 +3,7 @@
 .main__products {
   background-color: lighten($main_background_color, 1%);
   @include flex();
-  padding-block-end: $base_padding * 3; 
+  padding-block-end: $base_padding * 1.5; 
   background-image: $background_gradientL1B;
 }
 
