@@ -4,6 +4,11 @@
 @import '../Cart/Cart';
 @import "../Footer/Footer";
 
+body{
+  background-color: $main_background_color;
+  padding: 0;
+  margin: 0;
+}
 .app {
   background-color: darken($main_background_color, 4%);
   height: 100vh;
