@@ -4,11 +4,16 @@
 //   background-color: darken($main_background_color, 4%);
 // }
 .cart {
-  margin: 0;
-  padding-inline: $base_padding * 3;
-  padding-block: $base_padding;
+  margin: 0 auto;
+  padding: $base_padding;
   background-image: $background_gradientL10;
   // background-color: darken($main_background_color, 58%);
+  @include breakpoint(480px) {
+    padding: $base_padding * 2;
+  }
+  @include breakpoint(920px) {
+    padding: $base_padding * 3;
+  }
 }
 .cart__summary {
   background-color: darken($main_background_color, 4%);
@@ -16,7 +21,7 @@
   & p {
     font-weight: map-get($map: $fontWeight, $key: bold);
   }
-  & .grand__price{
+  & .grand__price {
     font-size: map-get($map: $fontSizes, $key: normal2);
     text-decoration: underline;
   }
@@ -55,11 +60,11 @@
     @include flex(column);
     font-family: Montserrat;
     padding: $base_padding;
-    @include breakpoint(960px){
+    @include breakpoint(960px) {
       flex-direction: row;
       column-gap: $base_padding;
     }
-    // 
+    //
     .cart__item__subtotal {
       font-weight: map-get($map: $fontWeight, $key: semi_bold);
     }
@@ -79,8 +84,8 @@
       border: 1px solid complement($color: $main_background_color);
       &:hover {
         background-color: darken($main_background_color, 44%);
-        font-size: map-get($map: $fontSizes, $key: normal2)
-        }
+        font-size: map-get($map: $fontSizes, $key: normal2);
+      }
     }
     .remove__item__from__cart {
       @extend .manually__select__qty;
